@@ -152,6 +152,10 @@ ABOUT
 	border-radius: 100%;
 }
 
+#wrapper section {
+	padding-top: 20px;
+}
+
 
 /*******************************************
 CONTACT
