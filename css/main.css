@@ -10,6 +10,12 @@ body {
 	font-family: 'Raleway', sans-serif;
 }
 
+.clearfix::after {
+	content: " ";
+	display: table;
+	clear: both;
+}
+
 
 
 /*******************************************
@@ -20,53 +26,38 @@ HEADER
 	text-align: center;
 }
 
-header {
-	margin: 0 0 30px 0;
+.main-header {
+	background-color: #ffffff;
+	margin: 0 0 0 0;
 	padding: 5px 0 0 0;
 	overflow: auto;
-	background-image: url("../img/montagne.jpg");
-	background-attachment: scroll;
-	background-size: cover;
-	background-position: center;
-	text-align: center;
-	height: 100vh;
+	position: fixed;
+	width: 100%;
+	top: 0;
+	z-index: 1000;
 }
 
 h1 {
-	color: #ffffff;
+	color: #37A96D;
 	font-family: 'Candal', sans-serif;
-	margin: 15px 0 8px 0;
-	font-size: 2.1em;
+	margin: 1px 0 2px 0;
+	font-size: 1.8em;
 }
 
 h2 {
-	color: #ffffff;
+	color: #37A96D;
 	font-family: 'Candal', sans-serif;
-	margin: 8px 0 20px 0;
-	font-size: 1.4em;
+	margin: 2px 0 11px 0;
+	font-size: 0.85em;
 }
 
-header p {
-	font-size: 1.4em;
-	font-weight: bold;
-	text-align: center;
-	color: #ffffff;
-	margin: 0;
-	padding: 350px 0 0 0;
-	color: #175932;
-	font-family: 'Candal', sans-serif;
-}
-
-.arrow {
-  width: 50px;
-  margin: 20px 0;
-}
 
 /*******************************************
 NAV
 ******************************************/
 
 nav {
+	background-color: #297F52;
 	text-align: center;
 	padding: 5px 0 5px 0;
 }
@@ -75,6 +66,7 @@ nav a {
 	color: #ffffff;
 	font-weight: bold;
 	padding: 0 2px;
+	transition: all 1s;
 }
 
 
@@ -99,14 +91,37 @@ nav a.selected {
 
 
 /*******************************************
+BANNER
+******************************************/
+
+.banner {
+	text-align: center;
+	padding: 540px 0 10px 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+                url(../img/lake.jpg) no-repeat center / cover;
+}
+
+.banner p {
+	font-size: 1.4em;
+	font-family: 'Candal', sans-serif;
+	color: #ffffff;
+	margin-bottom: 10px;
+}
+
+.arrow {
+  width: 40px;
+  margin: 10px 0;
+}
+
+/*******************************************
 SECTION
 ******************************************/
 
-#portfolio {
-	max-width: 940px;
+.wrapper {
+	max-width: 1000px;
 	margin: 0 auto;
 	padding: 40px 5% 40px 5%;
-	overflow: auto;
+	box-sizing: border-box;
 }
 
 #gallery {
@@ -125,7 +140,15 @@ img {
 	width: 45%;
 	margin: 2.5%;
 	background-color: #f5f5f5;
+	position: relative;
+	z-index: 2;
+	transition: all 0.1s;
 }
+
+#gallery li:hover {
+    box-shadow: 0px 1px 2px 2px rgba(0, 0, 0, 0.2);
+}
+
 
 
 #gallery li a p {
@@ -142,16 +165,15 @@ img {
 FOOTER
 ******************************************/
 
-footer {
+.main-footer {
 	text-align: center;
 	clear: both;
 	padding: 40px;
-	background-color: #2DB46D;
+	background-color: #37A96D;
 }
 
-footer p, footer a {
+footer p {
 	font-size: 0.85em;
-	color: #ffffff;
 }
 
 .icona-social {
@@ -166,26 +188,13 @@ footer p, footer a {
 ABOUT
 ******************************************/
 
-.wrapper {
-     background-color: #2DB46D;
-     clear: both;
-     padding: 60px 0 80px 0;
+.container {
+	background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+                url(../img/map.jpg) no-repeat center/ cover;
+    background-attachment: fixed;
+	padding: 20px 0 10px 0;
 }
 
-
-#about {
-	max-width: 940px;
-	margin: 0 auto;
-	padding: 0 5% 0 5%;
-}
-
-#about p {
-	color: #ffffff;
-}
-
-#about h3 {
-	color: #175932;
-}
 
 .foto-profilo {
 	display: block;
@@ -194,22 +203,19 @@ ABOUT
 	border-radius: 100%;
 }
 
+#wrapper section {
+	padding-top: 20px;
+}
 
-
+#about p,  #about h3 {
+	color: #fff;
+}
 
 
 /*******************************************
 CONTACT
 ******************************************/
 
-
-#contact {
-	clear: both;
-	max-width: 940px;
-	margin: 0 auto;
-	padding: 40px 5% 40px 5%;
-	overflow: auto;
-}
 
 #contact-info {
 	list-style: none;

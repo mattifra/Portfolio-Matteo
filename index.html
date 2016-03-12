@@ -11,22 +11,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
   <body>
-    <header id="top">
+    <header class="main-header cliearfix">
       <a href="index.html" id="logo">
         <h1>Matteo Fratesi</h1>
-        <h2>Web Designer</h2>
+        <h2>Web Designer | Front-End Dev</h2>
       </a>
       <nav>
         <ul>
-          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="index.html">Portfolio</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
-      <p>Check out my works</P>
-      <a href="#portfolio"><img class="arrow" src="img/arrow.svg" alt="Down arrow"></a>
     </header>
-        <section id="portfolio">
+    <div class="banner">
+      <p>Check out my works</p>
+       <img class="arrow" src="img/arrow.svg" alt="Down arrow">
+    </div>
+      <div class="wrapper clearfix">
+        <section>
           <ul id="gallery">
             <li>
               <a href="http://lacerba.io" target="blank">
@@ -60,30 +63,34 @@
             </li>
           </ul>
         </section>
-        <div class="wrapper">
-          <section id="about">
-            <img src="img/profilo.jpg" alt="Foto Profilo" class="foto-profilo">
-            <h3>About</h3>
-            <p>Un architetto con la passione per il mondo del web design. Dopo la laurea e due anni di esperienza nell'architettura e nel design, si trasferisce a Berlino per immergersi a tempo pieno in quello che è la sua passione. </p>
-            <p>Ora Matteo è un esperto nell'utilizzo dei maggiori programmi di grafica e sa costruire siti con HTML, CSS e Javascript.</p>
-          </section>
-        </div>
-        <div id="contact">
-          <section id="info">
-            <h3>Info</h3>
-            <p>Hai un'idea di business e vorresti realizzarla? Stai cercando di lasciare il tuo posto di lavoro e reinventarti? Oppure vorresti acquisire nuove competenze in ambito management, programmazione, design o marketing? </p>
-            <p>Lacerba offre una risposta a tutte queste esigenze. Si tratta di spazio virtuale dove imparare dall’esperienza di startupper e professionisti tramite corsi, interviste e approfondimenti. Il nostro obbiettivo è aiutarti ad acquisire le competenze tecniche a trasformare la tua idea in un progetto sostenibile. </p>
-          </section>
-          <section id="contatti">
-            <h3>Contatti</h3>
-            <ul id="contact-info">
-              <li class="phone"><a href="tel:+39 3398698679">+39 3398698679</a></li>
-              <li class="mail"><a href="mailto:matteo@lacerba.io">matteo@lacerba.io</a></li>
-              <li class="twitter"><a href="https://twitter.com/MatteoFratesi" target="blank">@MatteoFratesi</a></li>
-            </ul>
-          </section>
-        </div>
-        <footer>
+      </div>
+        <div class="container" id="about">
+          <div class="wrapper clearfix">
+            <section> 
+              <img src="img/profilo.jpg" alt="Foto Profilo" class="foto-profilo">
+              <h3>About</h3>
+              <p>Un architetto con la passione per il mondo del web design. Dopo la laurea e due anni di esperienza nell'architettura e nel design, si trasferisce a Berlino per immergersi a tempo pieno in quello che è la sua passione. </p>
+              <p>Ora Matteo è un esperto nell'utilizzo dei maggiori programmi di grafica e sa costruire siti con HTML, CSS e Javascript.</p>
+            </section>
+          </div>
+       </div>
+      </div>
+      <div class="wrapper clearfix" id="contact">
+        <section id="info">
+          <h3>Info</h3>
+          <p>Hai un'idea di business e vorresti realizzarla? Stai cercando di lasciare il tuo posto di lavoro e reinventarti? Oppure vorresti acquisire nuove competenze in ambito management, programmazione, design o marketing? </p>
+          <p>Lacerba offre una risposta a tutte queste esigenze. Si tratta di spazio virtuale dove imparare dall’esperienza di startupper e professionisti tramite corsi, interviste e approfondimenti. Il nostro obbiettivo è aiutarti ad acquisire le competenze tecniche a trasformare la tua idea in un progetto sostenibile. </p>
+        </section>
+        <section id="contatti">
+          <h3>Contatti</h3>
+          <ul id="contact-info">
+            <li class="phone"><a href="tel:+39 3398698679">+39 3398698679</a></li>
+            <li class="mail"><a href="mailto:matteo@lacerba.io">matteo@lacerba.io</a></li>
+            <li class="twitter"><a href="https://twitter.com/MatteoFratesi" target="blank">@MatteoFratesi</a></li>
+          </ul>
+        </section>
+      </div>
+      <footer class="main-footer">
           <a href="http://facebook.com/matteo.fratesi" target="blank">
             <img src="img/facebook1.png" alt="Logo Facebook" class="icona-social">
           </a>
@@ -91,7 +98,6 @@
             <img src="img/twitter1.png" alt="Logo twitter" class="icona-social">
           </a>
           <p>&copy; 2016 Matteo Fratesi</p>
-          <a href="#top">To the top</a>
-        </footer>
+      </footer>
   </body>
 </html>
