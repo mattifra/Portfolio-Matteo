@@ -1,87 +1,23 @@
-@media screen and (min-width: 480px) {
 
-/*******************************************
-CONTACT
-******************************************/
+@media screen and (min-width: 760px) {
 
-	#info {
-		width: 50%;
-		float: left;
-	}
-
-	#contatti {
-		width: 40%;
-		float: right;
-	}
-
-
-
-}
-
-
-
-@media screen and (min-width: 660px) {
-
-/*******************************************
-ABOUT
-******************************************/
-
-    .foto-profilo {
+	  .imm-sx {
     	float: left;
-    	margin: 0 5% 50px 0;
-    }
+    	margin: 0 0 50px 0;
+    	width: 50%;
+      }
+
+      .descr-dx {
+      	float: right;
+      	width: 50%;
+      	padding-left: 5%;
+      }
+
+       .projects h2 {
+      margin-top: 0;
+      font-size: 1.3em;
+      }
 
 
-
-/*******************************************
-PORTFOLIO
-******************************************/
-
-
-#gallery li {
-	width: 28.33333333%;
 }
 
-
-/*******************************************
-HEADER
-******************************************/
-
-
-#logo {
-	float: left;
-	width: 45%;
-	margin-left: 5%;
-	text-align: left;
-}
-
-nav {
-	float: right;
-	width: 45%;
-	margin-right: 5%;
-	background: none;
-	text-align: right;
-	padding-top: 25px;
-}
-
-
-nav a {
-	padding: 0 5px;
-	font-weight: bold;
-	font-size: 1.1em;
-	color: #37A96D;
-}
-
-
-.main-header {
-	box-shadow: 0px 3px 2px rgba(0, 0, 0, 0.4);
-}
-
-@media screen and (min-width: 980px) {
-
-
-  #contact {
-    	padding-left: 140px;
-    } 
-
-}

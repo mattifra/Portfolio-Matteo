@@ -2,12 +2,20 @@
  GENERAL 
 ******************************************/
 
+* {
+	box-sizing: border-box;
+}
+
 a {
 	text-decoration: none;
+	color:inherit;
 }
 
 body {
-	font-family: 'Raleway', sans-serif;
+
+	font-family: 'Josefin Sans', sans-serif;
+	color: #A69C7B;
+	
 }
 
 .clearfix::after {
@@ -22,51 +30,58 @@ body {
 HEADER
 ******************************************/
 
-#logo {
+
+.main-header {
+	position: relative;
+	background-color: #F3EACC;
+	padding: 5px;
 	text-align: center;
 }
 
-.main-header {
-	background-color: #ffffff;
-	margin: 0 0 0 0;
-	padding: 5px 0 0 0;
-	overflow: auto;
-	position: fixed;
-	width: 100%;
-	top: 0;
-	z-index: 1000;
+.top-logo {
+	width: 40px;
+}
+
+.freccia {
+	width: 25px;
+}
+
+#freccia {
+	position: absolute;
+	top: 25%;
+	left: 1%;
+}
+
+/*******************************************
+SEC HEADER
+******************************************/
+
+.secondary-header {
+	margin-bottom: 40px;
+	text-align: center;
+
 }
 
 h1 {
-	color: #37A96D;
-	font-family: 'Candal', sans-serif;
-	margin: 1px 0 2px 0;
-	font-size: 1.8em;
+	color: #A69C7B;
+	font-size: 1.3em;
+	font-weight: normal;
 }
-
-h2 {
-	color: #37A96D;
-	font-family: 'Candal', sans-serif;
-	margin: 2px 0 11px 0;
-	font-size: 0.85em;
-}
-
 
 /*******************************************
 NAV
 ******************************************/
 
 nav {
-	background-color: #297F52;
 	text-align: center;
 	padding: 5px 0 5px 0;
 }
 
 nav a {
-	color: #ffffff;
-	font-weight: bold;
-	padding: 0 2px;
-	transition: all 1s;
+	color: #A69C7B;
+	font-size: 1.3em;
+	margin: 0 7px;
+	transition: all 0.07s;
 }
 
 
@@ -82,35 +97,11 @@ nav li {
 
 
 nav a:hover {
-	color: #27583F;
+	border-bottom: 2px #A69C7B solid ;
 }
 
 nav a.selected {
-	color: #27583F;
-}
-
-
-/*******************************************
-BANNER
-******************************************/
-
-.banner {
-	text-align: center;
-	padding: 540px 0 10px 0;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-                url(../img/lake.jpg) no-repeat center / cover;
-}
-
-.banner p {
-	font-size: 1.4em;
-	font-family: 'Candal', sans-serif;
-	color: #ffffff;
-	margin-bottom: 10px;
-}
-
-.arrow {
-  width: 40px;
-  margin: 10px 0;
+	border-bottom: 2px #A69C7B solid ;
 }
 
 /*******************************************
@@ -118,10 +109,9 @@ SECTION
 ******************************************/
 
 .wrapper {
-	max-width: 1000px;
+	max-width: 760px;
 	margin: 0 auto;
 	padding: 40px 5% 40px 5%;
-	box-sizing: border-box;
 }
 
 #gallery {
@@ -136,30 +126,40 @@ img {
 
 
 #gallery li {
-	float: left;
-	width: 45%;
-	margin: 2.5%;
-	background-color: #f5f5f5;
-	position: relative;
-	z-index: 2;
+	transition: all 0.1s;
+	text-align: center;
+	margin: 0 0 50px 0;
+}
+
+#gallery li img {
 	transition: all 0.1s;
 }
 
-#gallery li:hover {
+#gallery li img:hover {
     box-shadow: 0px 1px 2px 2px rgba(0, 0, 0, 0.2);
 }
 
 
 
 #gallery li a p {
-	font-size: 0.85em;
-	color: #000000;
-	padding: 5%;
-	margin: 0;
+	font-size: 1em;
+	margin: 10px 0 0 0;
 }
 
 
+.wrapper-2 {
+	max-width: 1060px;
+	margin: 0 auto;
+	padding: 50px 5% 40px 5%;
+	min-height: calc(100vh - 330.1875px);
+}
 
+ .projects h2 {
+      font-size: 1.3em;
+      font-weight: normal;
+      }
+
+   
 
 /*******************************************
 FOOTER
@@ -168,8 +168,8 @@ FOOTER
 .main-footer {
 	text-align: center;
 	clear: both;
-	padding: 40px;
-	background-color: #37A96D;
+	padding: 5px;
+	background-color: #F7F0DE;
 }
 
 footer p {
@@ -185,69 +185,42 @@ footer p {
 
 
 /*******************************************
-ABOUT
+BREAKING
 ******************************************/
 
 .container {
-	background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-                url(../img/map.jpg) no-repeat center/ cover;
-    background-attachment: fixed;
-	padding: 20px 0 10px 0;
+	background: url(../img/breaking.jpg) no-repeat center/ cover;
+	min-height: 230px;
+                
 }
 
-
-.foto-profilo {
-	display: block;
-	max-width: 200px;
-	margin: 0 auto 40px;
-	border-radius: 100%;
+.scritta-bottom1 {
+    text-align: center;
+	padding-left: 25%; 
+	padding-top: 115px;
 }
 
-#wrapper section {
-	padding-top: 20px;
+.scritta-bottom2 {
+	text-align: center;
+	padding-left: 33%;
 }
 
-#about p,  #about h3 {
-	color: #fff;
-}
+#breaking p {
+	font-size: 2em;
+	font-weight: 400;
+	margin: 0;
 
+}
 
 /*******************************************
-CONTACT
+ABOUT
 ******************************************/
 
+.about h2 {
+	   font-size: 1.3em;
+      font-weight: normal;
 
-#contact-info {
-	list-style: none;
-	padding: 0;
-	margin: 0;
 }
-
-
-
-#contact-info a {
-	color: #000000;
-	display: block;
-	min-height: 20px;
-	background-repeat: no-repeat;
-	background-size: 20px 20px;
-	padding: 0 0 0 30px;
-	margin: 0 0 10px;
-}
-
-
-#contact-info li.phone a {
-	background-image: url(../img/phone.png);
-}
-
-#contact-info li.mail a {
-	background-image: url(../img/mail.png);
-}
-
-#contact-info li.twitter a {
-	background-image: url(../img/twitter.png);
-}
-
 
 
 
