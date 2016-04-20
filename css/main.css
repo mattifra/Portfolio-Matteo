@@ -112,6 +112,7 @@ SECTION
 	max-width: 760px;
 	margin: 0 auto;
 	padding: 40px 5% 40px 5%;
+	min-height: calc(100vh - 330.1875px);
 }
 
 #gallery {
@@ -219,10 +220,15 @@ ABOUT
 .about h2 {
 	   font-size: 1.3em;
       font-weight: normal;
-
 }
 
-
+.about {
+	 max-width: 500px;
+      background-color: #F7F0DE;
+      padding: 20px;
+      text-align: center;
+      margin: 0 auto;
+}
 
 
 
