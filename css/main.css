@@ -52,12 +52,13 @@ HEADER
 	left: 1%;
 }
 
+
 /*******************************************
 SEC HEADER
 ******************************************/
 
 .secondary-header {
-	margin-bottom: 40px;
+	margin-bottom: 30px;
 	text-align: center;
 
 }
@@ -65,9 +66,14 @@ SEC HEADER
 h1 {
 	color: #A69C7B;
 	font-size: 1.3em;
+	
+
 	font-weight: normal;
 }
 
+.secondary-header p {
+	margin-top: 30px;
+}
 /*******************************************
 NAV
 ******************************************/
@@ -159,7 +165,9 @@ img {
       font-weight: normal;
       }
 
-   
+   .italic {
+   	font-style: italic;
+   }
 
 /*******************************************
 FOOTER
