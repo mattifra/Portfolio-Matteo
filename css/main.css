@@ -204,13 +204,13 @@ BREAKING
 
 .scritta-bottom1 {
     text-align: center;
-	padding-left: 25%; 
+	padding-left: 27%; 
 	padding-top: 115px;
 }
 
 .scritta-bottom2 {
 	text-align: center;
-	padding-left: 33%;
+	padding-left: 35%;
 }
 
 #breaking p {
@@ -235,8 +235,8 @@ ABOUT
 
 
 .about h2 {
-	   font-size: 1.5em;
-      font-weight: 600;
+	   font-size: 1.3em;
+      font-weight: 400;
 }
 
 .about {
