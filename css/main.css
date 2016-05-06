@@ -249,8 +249,11 @@ ABOUT
 }
 
 .icons img {
-	width: 30px;
+	width: 20px;
+}
 
+#twit {
+	width: 25px;
 }
 
 .icons {
