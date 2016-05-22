@@ -8,6 +8,8 @@
     <link href='https://fonts.googleapis.com/css?family=Josefin+Sans:400,700,600italic,400italic,700italic,600' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <link rel="stylesheet" type="text/css" href="css/responsive.css">
+    <link href="css/lightbox.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
   <body>
@@ -20,14 +22,40 @@
       </a>
     </header>
       <div class="wrapper-2 clearfix">
-         <section class="projects">
+         <section class="projects clearfix">
               <h1><a href="http://crafta.in/" target="blank">Craftain</a></h1>
-              <img src="img/crafter.jpg" alt="" class="imm-sx">
+              <img src="img/alaska.jpg" alt="" class="imm-sx">
               <div class="descr-dx">
                 <h2>Co-Founder, and Web Designer</h2>
                 <p><a href="http://crafta.in/" target="blank" class="link">Craftain</a> is the place where you can learn the latest technologies directly from their creators. I enjoy doing all the illustrations in the website.</p>
                 <p> </p>
              </div>
+        </section>  
+        <section class="illustrations">
+          <p>These are some of my illustrations for Craftain:</p>
+          <ul id="gallery">
+            <li>
+              <a href="img/crafter.jpg" data-lightbox="roadtrip">
+                <img src="img/crafter.jpg" alt="" >
+              </a>
+            </li>
+               <li>
+              <a href="img/drive.jpg" data-lightbox="roadtrip">
+                <img src="img/drive.jpg" alt="" >
+              </a>
+            </li>
+            <li>
+              <a href="img/startup.jpg" data-lightbox="roadtrip">
+                <img src="img/startup.jpg" alt="">
+              </a>
+            </li>
+            <li>
+              <a href="img/alaska.jpg" data-lightbox="roadtrip">
+                <img src="img/alaska.jpg" alt="">
+              </a>
+            </li>
+         
+          </ul>
         </section>    
       </div>
         
@@ -43,5 +71,6 @@
       <footer class="main-footer">
           <p>&copy; 2016 Matteo Fratesi</p>
       </footer>
+      <script src="js/lightbox.js"></script>
   </body>
 </html>

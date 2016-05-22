@@ -18,6 +18,11 @@
       font-size: 1.3em;
       }
 
+       .illustrations li {
+      float: left;
+      width: 25%;
+      }
+
 
 }
 

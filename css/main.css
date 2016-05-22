@@ -131,23 +131,23 @@ img {
 }
 
 
-#gallery li {
+.projects li {
 	transition: all 0.1s;
 	text-align: center;
 	margin: 0 0 50px 0;
 }
 
-#gallery li img {
+.projects li img {
 	transition: all 0.1s;
 }
 
-#gallery li img:hover {
+.projects li img:hover {
     box-shadow: 0px 1px 2px 2px rgba(0, 0, 0, 0.2);
 }
 
 
 
-#gallery li a p {
+.projects li a p {
 	font-size: 1em;
 	margin: 10px 0 0 0;
 }
@@ -282,5 +282,11 @@ PROGETTI
 	font-weight: 600;
 }
 
+/*******************************************
+LIGHTBOX
+******************************************/
 
+.illustrations li {
+	margin: 0;
+}
 

@@ -8,6 +8,8 @@
     <link href='https://fonts.googleapis.com/css?family=Josefin+Sans:400,700,600italic,400italic,700italic,600' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <link rel="stylesheet" type="text/css" href="css/responsive.css">
+    <link href="css/lightbox.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
   <body>
@@ -20,7 +22,7 @@
       </a>
     </header>
       <div class="wrapper-2 clearfix">
-         <section class="projects">
+         <section class="projects clearfix">
               <h1><a href="http://lacerba.io/" target="blank">Lacerba.io</a></h1>
               <img src="img/homepage.jpg" alt="" class="imm-sx">
               <div class="descr-dx">
@@ -28,9 +30,34 @@
                 <p><a href="http://lacerba.io/" target="blank" class="link">Lacerba.io</a> is an online startup community focused on Italian market. At Lacerba we teach people how to convert an idea into reality building web applications with Ruby on Rails learning the lean startup approach and the basic marketing and design tactics in order to successfully start a new startup.</p>
                 <p>Our courses will walk the students through the whole process of developing Startup Projects step-by-step including mentorship interview with italian founders. </p>
              </div>
-        </section>    
+        </section>  
+        <section class="illustrations">
+          <p>These are some of my illustrations for Lacerba.io:</p>
+          <ul id="gallery">
+            <li>
+              <a href="img/bilancio.jpg" data-lightbox="roadtrip">
+                <img src="img/bilancio.jpg" alt="" >
+              </a>
+            </li>
+               <li>
+              <a href="img/blog.jpg" data-lightbox="roadtrip">
+                <img src="img/blog.jpg" alt="" >
+              </a>
+            </li>
+            <li>
+              <a href="img/html-css.jpg" data-lightbox="roadtrip">
+                <img src="img/html-css.jpg" alt="">
+              </a>
+            </li>
+            <li>
+              <a href="img/landing-page.jpg" data-lightbox="roadtrip">
+                <img src="img/landing-page.jpg" alt="">
+              </a>
+            </li>
+         
+          </ul>
+        </section>  
       </div>
-        
       <div class="container" id="breaking">
           <div class="scritta-bottom1">
            <p>Never Stop</p>
@@ -43,5 +70,6 @@
       <footer class="main-footer">
           <p>&copy; 2016 Matteo Fratesi</p>
       </footer>
+      <script src="js/lightbox.js"></script>
   </body>
 </html>
