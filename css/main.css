@@ -66,14 +66,17 @@ SEC HEADER
 h1 {
 	color: #A69C7B;
 	font-size: 1.3em;
-	
-
 	font-weight: normal;
 }
 
 .secondary-header p {
 	margin-top: 30px;
 }
+
+.darker {
+	font-weight: 600;
+}
+
 /*******************************************
 NAV
 ******************************************/

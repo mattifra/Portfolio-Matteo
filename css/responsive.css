@@ -22,7 +22,19 @@
       float: left;
       width: 25%;
       }
+      
+     #first {
+        float: left;
+        width: 60%;
+        text-align: right;
+      }
 
+      #rotate {
+        width: 40%;
+        float: right;
+        text-align: left;
+
+      }
 
 }
 
