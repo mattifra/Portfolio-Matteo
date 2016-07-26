@@ -6,9 +6,9 @@
     <link rel="shortcut icon" type="image/x-icon" href="img/favmf.ico">
     <link rel="stylesheet" type="text/css" href="css/normalize.css">
     <link href='https://fonts.googleapis.com/css?family=Josefin+Sans:400,700,600italic,400italic,700italic,600' rel='stylesheet' type='text/css'>
+     <link rel="stylesheet" type="text/css" href="js/animsition/animsition.min.css">
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <link rel="stylesheet" type="text/css" href="css/responsive.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
   <body>
@@ -17,62 +17,65 @@
         <img src="img/mf.png" class="top-logo">
       </a>
     </header>
-      <div class="wrapper clearfix">
-        <div class="secondary-header clearfix">
-           <div class="headline clearfix">
-            <h1 id="first">Matteo Fratesi is a nomad &nbsp</h1>
-            <h1 id="rotate" class="darker">da cambiare</h1> 
+     <div class="animsition">
+        <div class="wrapper clearfix">
+          <div class="secondary-header clearfix">
+             <div class="headline clearfix">
+              <h1 id="first">Matteo Fratesi is a nomad &nbsp</h1>
+              <h1 id="rotate" class="darker">da cambiare</h1> 
+            </div>
+            <nav>
+              <ul>
+                <li><a href="index.html">Portfolio</a></li>
+                <li><a href="courses.html" class="selected">Courses</a></li>
+                <li><a href="about.html">About</a></li>
+              </ul>
+            </nav>
+            <p>The following courses are part of our project <a href="http://lacerba.io/" target="blank" class="link">Lacerba.io</a>, an e-learning platform for acquiring digital skills. I enjoy teaching Web Design and Graphic Design. Here are my courses:</p>
           </div>
-          <nav>
-            <ul>
-              <li><a href="index.html">Portfolio</a></li>
-              <li><a href="courses.html" class="selected">Courses</a></li>
-              <li><a href="about.html">About</a></li>
+          <section class="projects">
+            <ul id="gallery">
+              <li>
+                <a href="http://lacerba.io/courses/bundlehtmlcss" target="blank">
+                  <img src="img/web-des.jpg" alt="">
+                  <p>Create a website with HTML and CSS</p>
+                </a>
+              </li>
+              <li>
+                <a href="http://www.lacerba.io/courses/primologo" target="blank">
+                  <img src="img/logo.jpg" alt="">
+                  <p>Create your first logo with Adobe Illustrator</p>
+                </a>
+              </li>
+              <li>
+                <a href="http://www.lacerba.io/courses/grafiche-originali-con-illustrator-avanzato" target="blank">
+                  <img src="img/illustr-avanzato.jpg" alt="">
+                  <p>Advanced Illustrator for Graphic Design</p>
+                </a>
+              </li>
+              <li>
+                <a href="http://lacerba.io/courses/javascriptbase" target="blank">
+                  <img src="img/js-base.jpg" alt="">
+                  <p>JavaScript Basics</p>
+                </a>
+              </li>
             </ul>
-          </nav>
-          <p>The following courses are part of our project <a href="http://lacerba.io/" target="blank" class="link">Lacerba.io</a>, an e-learning platform for acquiring digital skills. I enjoy teaching Web Design and Graphic Design. Here are my courses:</p>
+          </section>
         </div>
-        <section class="projects">
-          <ul id="gallery">
-            <li>
-              <a href="http://lacerba.io/courses/bundlehtmlcss" target="blank">
-                <img src="img/web-des.jpg" alt="">
-                <p>Create a website with HTML and CSS</p>
-              </a>
-            </li>
-            <li>
-              <a href="http://www.lacerba.io/courses/primologo" target="blank">
-                <img src="img/logo.jpg" alt="">
-                <p>Create your first logo with Adobe Illustrator</p>
-              </a>
-            </li>
-            <li>
-              <a href="http://www.lacerba.io/courses/grafiche-originali-con-illustrator-avanzato" target="blank">
-                <img src="img/illustr-avanzato.jpg" alt="">
-                <p>Advanced Illustrator for Graphic Design</p>
-              </a>
-            </li>
-            <li>
-              <a href="http://lacerba.io/courses/javascriptbase" target="blank">
-                <img src="img/js-base.jpg" alt="">
-                <p>JavaScript Basics</p>
-              </a>
-            </li>
-          </ul>
-        </section>
-      </div>
-        <div class="container" id="breaking">
-          <div class="scritta-bottom1">
-           <p>Never Stop</p>
-          </div>
-           <div class="scritta-bottom2">
-           <p>Cooking</p>
-          </div>
-       </div>
-   
-      <footer class="main-footer">
-          <p>&copy; 2016 Matteo Fratesi</p>
-      </footer>
+          <div class="container" id="breaking">
+            <div class="scritta-bottom1">
+             <p>Never Stop</p>
+            </div>
+             <div class="scritta-bottom2">
+             <p>Cooking</p>
+            </div>
+         </div>
+        <footer class="main-footer">
+            <p>&copy; 2016 Matteo Fratesi</p>
+        </footer>
+    </div>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+       <script src="js/animsition/animsition.min.js"></script>
       <script src="js/script.js"></script>  
   </body>
 </html>

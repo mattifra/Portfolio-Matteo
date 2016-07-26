@@ -6,3 +6,11 @@ function rotateTerm() {
               .delay(2000).fadeOut(400, rotateTerm);
 }
 $(rotateTerm);
+
+$(".animsition").animsition({
+	inDuration: 1000,
+    outDuration: 500,
+    linkElement: 'nav a',
+});
+
+
