@@ -8,9 +8,9 @@ function rotateTerm() {
 $(rotateTerm);
 
 $(".animsition").animsition({
-	inDuration: 1000,
+	inDuration: 500,
     outDuration: 500,
-    linkElement: 'nav a',
+    linkElement: 'a',
 });
 
 
