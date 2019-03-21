@@ -1,0 +1,56 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    title Matteo Fratesi | Portfolio
+    link(rel='shortcut icon', type='image/x-icon', href='img/favmf.ico')
+    link(rel='stylesheet', type='text/css', href='js/animsition/animsition.min.css')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+  body
+    header.main-header.clearfix
+      a#logo(href='index.html')
+        img.top-logo(src='mf.png')
+    .animsition
+      .wrapper.clearfix
+        .secondary-header.clearfix
+          .headline.clearfix
+            h1#first Matteo Fratesi is a nomad  
+            h1#rotate.darker da cambiare
+          nav
+            ul
+              li
+                a.selected(href='index.html') Websites
+              li
+                a(href='illustrations.html') Illustrations
+              li
+                a(href='about.html') About
+        section.projects
+          ul#gallery
+            li
+              a(href='craftain.html')
+                img(src='craftain2.jpg', alt='Craftain')
+                p
+                  | Craftain - Web Designer & Frontend Developer - 
+                  span.italic  ongoing
+            li
+              a(href='lacerba.html')
+                img(src='lacerba2.jpg', alt='Lacerba')
+                p
+                  | Lacerba - Web Designer & Frontend Developer - 
+                  span.italic  ongoing
+            li
+              a(href='https://mattifra.github.io/TodoList-App/', target='_blank')
+                img(src='todo.jpg', alt='TodoList')
+                p
+                  | Simple JavaScript TodoList App - 
+                  span.italic  2016
+      #breaking.container
+        .scritta-bottom1
+          p Never Stop
+        .scritta-bottom2
+          p Cooking
+    footer.main-footer
+      p © 2016 Matteo Fratesi
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js')
+    script(src='js/animsition/animsition.min.js')
+    script(src='js/script.js')

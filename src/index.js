@@ -1,5 +1,7 @@
 import _ from 'lodash';
 import './style.css'; 
+import countMe from './counter.js';
+
 
 function component() {
   console.log('hello webpack');
@@ -16,3 +18,4 @@ function testLodash() {
 
 document.body.appendChild(testLodash());
 component();
+countMe();
