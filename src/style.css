@@ -1,0 +1,365 @@
+@font-face {
+  font-family: 'Josefin Sans';
+  src: url('fonts/JosefinSans-Bold.woff2') format('woff2'),
+      url('fonts/JosefinSans-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Josefin Sans';
+  src: url('fonts/JosefinSans-Regular.woff2') format('woff2'),
+      url('fonts/JosefinSans-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+
+
+/*******************************************
+ GENERAL 
+******************************************/
+
+* {
+	box-sizing: border-box;
+}
+
+a {
+	text-decoration: none;
+	color:inherit;
+}
+
+body {
+
+	font-family: 'Josefin Sans', sans-serif;
+	color: #A69C7B;
+	
+}
+
+.clearfix::after {
+	content: " ";
+	display: table;
+	clear: both;
+}
+
+
+
+/*******************************************
+HEADER
+******************************************/
+
+
+.main-header {
+	position: relative;
+	background-color: #F3EACC;
+	padding: 5px;
+	text-align: center;
+}
+
+.top-logo {
+	width: 40px;
+}
+
+.freccia {
+	width: 25px;
+}
+
+#freccia {
+	position: absolute;
+	top: 25%;
+	left: 1%;
+}
+
+
+/*******************************************
+SEC HEADER
+******************************************/
+
+.secondary-header {
+	margin-bottom: 30px;
+	text-align: center;
+
+}
+
+h1 {
+	color: #A69C7B;
+	font-size: 1.3em;
+	font-weight: normal;
+}
+
+.secondary-header p {
+	margin-top: 30px;
+}
+
+.darker {
+	font-weight: 600;
+}
+
+/*******************************************
+NAV
+******************************************/
+
+nav {
+	text-align: center;
+	padding: 5px 0 5px 0;
+}
+
+nav a {
+	color: #A69C7B;
+	font-size: 1.3em;
+	margin: 0 7px;
+	transition: all 0.07s;
+}
+
+
+nav ul {
+	list-style: none;
+	margin: 5px 0;
+	padding: 0;
+}
+
+nav li {
+	display: inline-block;
+}
+
+
+nav a:hover {
+	border-bottom: 2px #A69C7B solid ;
+}
+
+nav a.selected {
+	border-bottom: 2px #A69C7B solid ;
+}
+
+/*******************************************
+SECTION
+******************************************/
+
+.wrapper {
+	max-width: 760px;
+	margin: 0 auto;
+	padding: 40px 5% 40px 5%;
+}
+
+#gallery {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+img {
+	max-width: 100%;
+}
+
+
+.projects li {
+	transition: all 0.1s;
+	text-align: center;
+	margin: 0 0 50px 0;
+}
+
+.projects li img {
+	transition: all 0.1s;
+}
+
+.projects li img:hover {
+    box-shadow: 0px 1px 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+
+
+.projects li a p {
+	font-size: 1em;
+	margin: 10px 0 0 0;
+}
+
+
+.wrapper-2 {
+	max-width: 1060px;
+	margin: 0 auto;
+	padding: 50px 5% 40px 5%;
+	min-height: calc(100vh - 330.1875px);
+}
+
+ .projects h2 {
+      font-size: 1.3em;
+      font-weight: normal;
+      }
+
+   .italic {
+   	font-style: italic;
+   }
+
+/*******************************************
+FOOTER
+******************************************/
+
+.main-footer {
+	text-align: center;
+	clear: both;
+	padding: 5px;
+	background-color: #F7F0DE;
+}
+
+footer p {
+	font-size: 0.85em;
+}
+
+.icona-social {
+	width: 30px;
+	height: 30px;
+	margin: 0 5px;
+}
+
+
+
+/*******************************************
+BREAKING
+******************************************/
+
+#breaking {
+	background: url('./img/breaking.jpg') no-repeat center/ cover;
+	min-height: 230px;
+                
+}
+
+.scritta-bottom1 {
+    text-align: center;
+	padding-left: 27%; 
+	padding-top: 115px;
+}
+
+.scritta-bottom2 {
+	text-align: center;
+	padding-left: 35%;
+}
+
+#breaking p {
+	font-size: 2em;
+	font-weight: 400;
+	margin: 0;
+
+}
+
+/*******************************************
+ABOUT
+******************************************/
+
+#fire {
+	background: linear-gradient(rgba(255, 255, 255, 0.0), rgba(255, 255, 255, 0.0)),
+	             url('./img/fire.jpg') no-repeat center/ cover;
+	min-height: 550px;
+	margin-top: -35px;
+                
+}
+
+
+
+.about h2 {
+	   font-size: 1.3em;
+      font-weight: 400;
+}
+
+.about {
+	 max-width: 500px;
+      background-color: #F3EACC;
+      padding: 20px;
+      text-align: center;
+      margin: 20px auto;
+      border-radius: 15px;
+}
+
+.icons img {
+	width: 20px;
+}
+
+#twit {
+	width: 25px;
+}
+
+.icons {
+	text-align: center;
+
+}
+
+.icons li {
+    display: inline-block;
+	padding: 10px;
+}
+
+ul {
+	padding: 0;
+}
+
+.social {
+	padding-top: 0px;
+}
+
+/*******************************************
+PROGETTI
+******************************************/
+
+.link {
+	font-weight: 600;
+}
+
+/*******************************************
+LIGHTBOX
+******************************************/
+
+.illustrations li {
+	margin: 0;
+}
+
+
+
+@media screen and (min-width: 760px) {
+
+	  .imm-sx {
+    	float: left;
+    	margin: 0 0 50px 0;
+    	width: 50%;
+      }
+
+      .descr-dx {
+      	float: right;
+      	width: 50%;
+      	padding-left: 5%;
+      }
+
+       .projects h2 {
+      margin-top: 0;
+      font-size: 1.3em;
+      }
+
+       .illustrations li {
+      float: left;
+      width: 25%;
+      }
+      
+     #first {
+        float: left;
+        width: 60%;
+        text-align: right;
+      }
+
+      #rotate {
+        width: 40%;
+        float: right;
+        text-align: left;
+
+      }
+
+}
+
+
+
+
+
+
+
+
+
+
+
