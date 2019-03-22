@@ -20,3 +20,5 @@ function testLodash() {
 document.body.appendChild(testLodash());
 component();
 countMe();
+
+

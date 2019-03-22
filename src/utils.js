@@ -3,7 +3,6 @@ exports.pages = function (env, folder = '') {
   const HtmlWebpackPlugin = require('html-webpack-plugin')
   const fs = require('fs')
   const path = require('path')
-  console.log( path.resolve(__dirname, `views/${rootPagesFolderName}/${folder}`))
   const viewsFolder = path.resolve(__dirname, `views/${rootPagesFolderName}/${folder}`)
 
   var pages = []
@@ -29,6 +28,7 @@ exports.pages = function (env, folder = '') {
     }
 
     pages.push(new HtmlWebpackPlugin(options));
+
   })
 
   return pages;
