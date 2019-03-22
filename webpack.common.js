@@ -14,6 +14,11 @@ module.exports = {
   entry: {
     app: './src/index.js'
   },
+  output: {
+    filename: '[name].bundle.js',
+    path: path.resolve(__dirname, 'dist'),
+    publicPath: 'dist'
+  },
   plugins: [
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
@@ -44,10 +49,6 @@ module.exports = {
       chunkFilename: "[id].css"
     })
   ],
-  output: {
-    filename: '[name].bundle.js',
-    path: path.resolve(__dirname, 'dist')
-  },
   module: {
     rules: [
       {
