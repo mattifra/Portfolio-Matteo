@@ -4,41 +4,48 @@ html
   body
     include ../components/header
     .animsition
-      .wrapper-2.clearfix
+      .wrapper.clearfix
         .secondary-header.clearfix
           .headline.clearfix
             h1#first Matteo Fratesi is a nomad  
             h1#rotate.darker da cambiare
-          include ../components/nav
-      #fire.container
-        .wrapper.clearfix
-          .about
-            h2
-              | Hello!
-              br
-              |  If you need a website, a logo, an illustration or a beer 
-              |                write me at 
-              a.link(href='mailto:matteo@lacerba.io') matteo@lacerba.io
-              br
-              |  or give me a call at 
-              a.link(href='tel:+393398698679') +39 3398698679
-          .icons.clearfix
+          nav
             ul
               li
-                a(href='https://www.facebook.com/matteo.fratesi', target='_blank')
-                  img(src='img/facebook-letter-logo.svg')
+                a(href='index.html') Websites
               li
-                a(href='https://twitter.com/MatteoFratesi', target='_blank')
-                  img#twit(src='img/twitter-logo.png')
+                a(href='illustrations.html') Illustrations
               li
-                a(href='https://www.linkedin.com/in/matteofratesi?trk=hp-identity-photo', target='_blank')
-                  img(src='img/linkedin-logo.svg')
-              li
-                a(href='https://dribbble.com/fratta', target='_blank')
-                  img(src='img/dribbble.png')
-              li
-                a(href='https://github.com/mattifra', target='_blank')
-                  img(src='img/github.png')
+                a.selected(href='about.html') About
+      #fire.container
+      .wrapper.clearfix
+        .about
+          h2
+            | Hello!
+            br
+            |  If you need a website, a logo, an illustration or a beer 
+            |                write me at 
+            a.link(href='mailto:matteo@lacerba.io') matteo@lacerba.io
+            br
+            |  or give me a call at 
+            a.link(href='tel:+393398698679') +39 3398698679
+        .icons.clearfix
+          ul
+            li
+              a(href='https://www.facebook.com/matteo.fratesi', target='_blank')
+                img(src='facebook-letter-logo.svg')
+            li
+              a(href='https://twitter.com/MatteoFratesi', target='_blank')
+                img#twit(src='twitter-logo.png')
+            li
+              a(href='https://www.linkedin.com/in/matteofratesi?trk=hp-identity-photo', target='_blank')
+                img(src='linkedin-logo.svg')
+            li
+              a(href='https://dribbble.com/fratta', target='_blank')
+                img(src='dribbble.png')
+            li
+              a(href='https://github.com/mattifra', target='_blank')
+                img(src='github.png')
       #breaking.container
         .scritta-bottom1
           p Never Stop

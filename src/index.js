@@ -1,7 +1,7 @@
 import _ from 'lodash';
 import './scss/main.scss'; 
-
 import countMe from './counter.js';
+import Lightbox from 'lightbox2';
 
 
 function component() {
