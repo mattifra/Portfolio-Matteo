@@ -1,24 +1,15 @@
 doctype html
 html
-  include page-head
+  include components/page-head
   body
-    header.main-header.clearfix
-      a#logo(href='index.html')
-        img.top-logo(src='mf.png')
+    include components/header
     .animsition
       .wrapper.clearfix
         .secondary-header.clearfix
           .headline.clearfix
             h1#first Matteo Fratesi is a nomad  
             h1#rotate.darker da cambiare
-          nav
-            ul
-              li
-                a.selected(href='index.html') Websites
-              li
-                a(href='illustrations.html') Illustrations
-              li
-                a(href='about.html') About
+          include components/nav
         section.projects
           ul#gallery
             li

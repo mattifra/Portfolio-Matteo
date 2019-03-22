@@ -4,6 +4,7 @@
   "description": "Simple personal portfolio web page: www.matteofratesi.com",
   "private": true,
   "dependencies": {
+    "file-system": "^2.2.2",
     "node-sass": "^4.9.3",
     "pug": "^2.0.3"
   },

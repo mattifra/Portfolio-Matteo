@@ -16,7 +16,7 @@ export default function countMe() {
   let arrowFunct = () => {
     console.log('test arrow funct');
   }
-
   arrowFunct();
+
 
 }

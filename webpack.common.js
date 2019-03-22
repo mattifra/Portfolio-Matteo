@@ -4,6 +4,9 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const webpack = require('webpack');
+const utils = require('./src/utils')
+const IS_DEV = process.env.NODE_ENV === 'development';
+
 
 
 
@@ -14,13 +17,23 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
-      template: './src/index.pug',
+      template: './src/views/index.pug',
+      filename: 'index.html',
+      inject: true
     }),
-    // Plugin that simply copy files from sources to the output folder without any logic
+    ...utils.pages(),
+
+
+    new webpack.ProvidePlugin({
+      $: 'jquery',
+      jQuery: 'jquery',
+      'window.$': 'jquery',
+      'window.jQuery': 'jquery'
+    }),
+
     new CopyWebpackPlugin([
       {
         from: './src/img',
-        // to: `${pathConfig.dist.images}`,
         ignore: [`icons/*.svg`]
       },
     ], {
