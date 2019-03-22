@@ -1,5 +1,6 @@
 import _ from 'lodash';
-import './style.css'; 
+import './scss/main.scss'; 
+
 import countMe from './counter.js';
 
 
