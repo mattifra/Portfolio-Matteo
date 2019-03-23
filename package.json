@@ -4,6 +4,7 @@
   "description": "Simple personal portfolio web page: www.matteofratesi.com",
   "private": true,
   "dependencies": {
+    "animsition": "^4.0.2",
     "file-system": "^2.2.2",
     "jquery": "^3.3.1",
     "lightbox2": "^2.10.0",
