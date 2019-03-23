@@ -1830,13 +1830,13 @@ th {
 ******************************************/
 @font-face {
   font-family: 'Josefin Sans';
-  src: url(/ec8501bd61871ed13d6f035c987a02f5.woff2) format("woff2"), url(/c2abf9233d9e708504c365ecb43bb3d6.woff) format("woff");
+  src: url(/Users/matteofratesi/works/projects/personal/Portfolio-Matteo/distec8501bd61871ed13d6f035c987a02f5.woff2) format("woff2"), url(/Users/matteofratesi/works/projects/personal/Portfolio-Matteo/distc2abf9233d9e708504c365ecb43bb3d6.woff) format("woff");
   font-weight: bold;
   font-style: normal; }
 
 @font-face {
   font-family: 'Josefin Sans';
-  src: url(/a4357661fbe786f6547b42cb5a1eb6f8.woff2) format("woff2"), url(/0f071d537eb3956349b6f05284a45b38.woff) format("woff");
+  src: url(/Users/matteofratesi/works/projects/personal/Portfolio-Matteo/dista4357661fbe786f6547b42cb5a1eb6f8.woff2) format("woff2"), url(/Users/matteofratesi/works/projects/personal/Portfolio-Matteo/dist0f071d537eb3956349b6f05284a45b38.woff) format("woff");
   font-weight: normal;
   font-style: normal; }
 
@@ -1986,7 +1986,7 @@ footer p {
 BREAKING
 ******************************************/
 #breaking {
-  background: url(/1dc7431ed9c01c645818a07b3faff4a8.jpg) no-repeat center/cover;
+  background: url(/Users/matteofratesi/works/projects/personal/Portfolio-Matteo/dist1dc7431ed9c01c645818a07b3faff4a8.jpg) no-repeat center/cover;
   min-height: 230px; }
 
 .scritta-bottom1 {
@@ -2007,7 +2007,7 @@ BREAKING
 ABOUT
 ******************************************/
 #fire {
-  background: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), url(/e0cdf41e02a3d125e354b7d67fc241ae.jpg) no-repeat center/cover;
+  background: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), url(/Users/matteofratesi/works/projects/personal/Portfolio-Matteo/diste0cdf41e02a3d125e354b7d67fc241ae.jpg) no-repeat center/cover;
   min-height: 550px;
   margin-top: -35px; }
 
@@ -2080,7 +2080,7 @@ LIGHTBOX
 
 /* Preload images */
 body:after {
-  content: url(/d9d2d0b1308cb694aa8116915592e2a9.png) url(/2299ad0b3f63413f026dfec20c205b8f.gif) url(/84b76dee6b27b795e89e3649078a11c2.png) url(/31f15875975aab69085470aabbfec802.png);
+  content: url(/Users/matteofratesi/works/projects/personal/Portfolio-Matteo/distd9d2d0b1308cb694aa8116915592e2a9.png) url(/Users/matteofratesi/works/projects/personal/Portfolio-Matteo/dist2299ad0b3f63413f026dfec20c205b8f.gif) url(/Users/matteofratesi/works/projects/personal/Portfolio-Matteo/dist84b76dee6b27b795e89e3649078a11c2.png) url(/Users/matteofratesi/works/projects/personal/Portfolio-Matteo/dist31f15875975aab69085470aabbfec802.png);
   display: none; }
 
 body.lb-disable-scrolling {
@@ -2145,7 +2145,7 @@ body.lb-disable-scrolling {
   width: 32px;
   height: 32px;
   margin: 0 auto;
-  background: url(/2299ad0b3f63413f026dfec20c205b8f.gif) no-repeat; }
+  background: url(/Users/matteofratesi/works/projects/personal/Portfolio-Matteo/dist2299ad0b3f63413f026dfec20c205b8f.gif) no-repeat; }
 
 .lb-nav {
   position: absolute;
@@ -2171,7 +2171,7 @@ body.lb-disable-scrolling {
   width: 34%;
   left: 0;
   float: left;
-  background: url(/84b76dee6b27b795e89e3649078a11c2.png) left 48% no-repeat;
+  background: url(/Users/matteofratesi/works/projects/personal/Portfolio-Matteo/dist84b76dee6b27b795e89e3649078a11c2.png) left 48% no-repeat;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
   opacity: 0;
   -webkit-transition: opacity 0.6s;
@@ -2187,7 +2187,7 @@ body.lb-disable-scrolling {
   width: 64%;
   right: 0;
   float: right;
-  background: url(/31f15875975aab69085470aabbfec802.png) right 48% no-repeat;
+  background: url(/Users/matteofratesi/works/projects/personal/Portfolio-Matteo/dist31f15875975aab69085470aabbfec802.png) right 48% no-repeat;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
   opacity: 0;
   -webkit-transition: opacity 0.6s;
@@ -2243,7 +2243,7 @@ body.lb-disable-scrolling {
   float: right;
   width: 30px;
   height: 30px;
-  background: url(/d9d2d0b1308cb694aa8116915592e2a9.png) top right no-repeat;
+  background: url(/Users/matteofratesi/works/projects/personal/Portfolio-Matteo/distd9d2d0b1308cb694aa8116915592e2a9.png) top right no-repeat;
   text-align: right;
   outline: none;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
