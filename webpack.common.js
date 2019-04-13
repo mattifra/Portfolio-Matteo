@@ -1,10 +1,8 @@
 const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const webpack = require('webpack');
-const utils = require('./src/assets/js/utils')
 const IS_DEV = process.env.NODE_ENV === 'development';
 
 
@@ -21,14 +19,6 @@ module.exports = {
   },
   plugins: [
     new CleanWebpackPlugin(),
-    new HtmlWebpackPlugin({
-      template: './src/views/index.pug',
-      filename: 'index.html',
-      inject: true
-    }),
-    ...utils.pages(),
-
-
     new webpack.ProvidePlugin({
       $: 'jquery',
       jQuery: 'jquery',
@@ -38,10 +28,11 @@ module.exports = {
 
     new CopyWebpackPlugin([
       {
-        from: './src//assets/img',
+        from: './src/assets/img',
         to: './images',
         ignore: [`icons/*.svg`]
       },
+      
     ], {
       copyUnmodified: true, // force to copy all files even if there are no changes to avoid conflicts with the CleanWebpackPlugin in watch mod
     }),

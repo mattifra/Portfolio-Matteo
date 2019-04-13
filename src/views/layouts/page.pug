@@ -1,0 +1,17 @@
+include ../ext/mixins
+
+doctype html
+html(lang="en")
+  block vars
+    - var includeFeDebug
+
+  head
+    include ../components/page-head
+
+  body(data-controller=controller, data-include="DebugToggle")
+    main
+      block content
+
+      if includeFeDebug
+        include ../components/dev
+

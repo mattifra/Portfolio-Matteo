@@ -4,6 +4,7 @@ exports.pages = function (env, folder = '') {
   const fs = require('fs')
   const path = require('path')
   const viewsFolder = path.resolve(__dirname, `../../views/${rootPagesFolderName}/${folder}`)
+  const IS_DEV = process.env.NODE_ENV === 'development';
 
   var pages = []
 
@@ -14,7 +15,7 @@ exports.pages = function (env, folder = '') {
     const viewName = view.split('.')[0];
     const fileName = folder === '' ? `${viewName}.html` : `${folder}/${viewName}.html`;
     const options = {
-      filename: fileName,
+      filename: IS_DEV ? fileName : `../${fileName}`,
       template: path.resolve(__dirname, `../../views/${rootPagesFolderName}/${view}`),
       inject: true
     };
