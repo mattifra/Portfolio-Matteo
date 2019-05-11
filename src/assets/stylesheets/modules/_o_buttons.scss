@@ -1,0 +1,41 @@
+.button-primary {
+  background-color: buttons(primary, background-color);
+  border-color: buttons(primary, border-color);
+  color: buttons(primary, color);
+
+  &:hover,
+  &:focus:hover {
+    background-color: buttons(primary, hover-background-color);
+    border-color: buttons(primary, hover-border-color);
+    color: buttons(primary, hover-color);
+  }
+
+  &:active,
+  &:active:focus,
+  &:focus {
+    background-color: buttons(primary, active-background-color);
+    border-color: buttons(primary, active-border-color);
+    color: buttons(primary, active-color);
+  }
+}
+
+.button-secondary {
+  background-color: buttons(secondary, background-color);
+  border-color: buttons(secondary, border-color);
+  color: buttons(secondary, color);
+
+  &:hover,
+  &:focus:hover {
+    background-color: buttons(secondary, hover-background-color);
+    border-color: buttons(secondary, hover-border-color);
+    color: buttons(secondary, hover-color);
+  }
+
+  &:active,
+  &:active:focus,
+  &:focus {
+    background-color: buttons(secondary, active-background-color);
+    border-color: buttons(secondary, active-border-color);
+    color: buttons(secondary, active-color);
+  }
+}

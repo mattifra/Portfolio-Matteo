@@ -1,29 +1,41 @@
-import '../scss/main.scss'; 
-import countMe from './counter.js';
+import '../stylesheets/main.scss'; 
 import Lightbox from 'lightbox2';
 //import _ from 'lodash';
 //import Animsition from 'animsition';
+import 'lazysizes';
+import './components/test'
+import { fellowship, total } from './components/fellowship'; //per importare i singoli metodi
+import a from './components/fellowship'; //per importare il default
+import * as imported from './components/moduleTest'; //per importare tutto
+import multiply from './components/math';
+import Animal from './components/animalClass'; //importo una classe
+import Lion from './components/lionClass';
+import Counter from './components/counter';
+import Helper from './utils/helper';
+import promiseTest from './components/promiseTest'
 
-function component() {
-  console.log('hello webpack');
-}
+console.log(imported)
+console.log(fellowship, total);
+a('ciao');
+console.log(multiply(5, 9));
+Helper.help('Heeellppp')
 
-component();
-countMe();
 
 
-function getComponent() {
+let lion = new Lion('lion', 'blonde');
+let anim = new Animal('Generic')
+let counter = new Counter();
+let promisetest = new promiseTest();
 
- return import(/* webpackChunkName: "lodash" */ 'lodash').then(({ default: _ }) => {
-   var element = document.createElement('div');
 
-   element.innerHTML = _.join(['Hello', 'webpack'], ' ');
+lion.render();
+anim.render();
+counter.render();
+promisetest.render();
 
-    return element;
-
-   }).catch(error => 'An error occurred while loading the component');
-  }
-  
-  getComponent().then(component => {
-     console.log(component);
-})
+/*
+anim.hello('animall')
+lion.hello('stocazz');
+lion.sayHello();
+anim.sayHello();
+*/

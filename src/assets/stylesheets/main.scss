@@ -1,0 +1,77 @@
+/* ===1) ABSTRACTS LAYER=== */
+
+/**
+ * include here every tools which won't generate any style rules. 
+ * It’s important not to output any CSS in this first layer.
+ * Try to comment out everything under section 2) of this file:
+ * If no stylesheet is built out,
+ * this means that you are on the right track!
+ */
+@import 'abstracts/functions';
+@import 'abstracts/mixins';
+@import 'abstracts/var_all';
+/**
+ * This import only-abstracts codebase from npm normalize-scss package
+ * We are going to actually generate it on top of _b_base.scss 
+ * through the normalize mixin provided by the package
+ */
+@import '~normalize-scss/sass/normalize';
+
+/* ===2) PROJECT BUILD STYLE STARTS HERE=== */
+
+/* Including thirdy-part style, you can override the vendor style then in the vendor layer */
+
+@import 'framework';
+@import 'vendors';
+
+/* ===2.1) BASE LAYER=== */
+/**
+ * This is the first layer which generates actual CSS. It includes normalize styles,
+ * global rules such as box-sizing definition, and the style for bare HTML elements. 
+ * From now on, we're going to use specific prefixes to file names, depending on thier function.
+ * The prefix _b_ stands for Base.
+ */
+@import 'modules/b_base';
+
+/* ===2.2) LAYOUTS LAYER=== */
+/**
+ * This is where we're creating the layout pillars for our project.
+ * This layer contains class-based selectors which define the skeleton of the website.
+ * We're not still taking care of the makeup here.
+ * The prefix _l_ stands for Layout.
+ */
+@import 'modules/l_pillars';
+@import 'modules/l_layout';
+
+/* ===2.3) OBJECTS LAYER=== */
+/**
+ * This is where majority of our work takes place and our UI atoms, molecules, organisms will be styled.
+ * The prefix _o_ stands for Objects.
+ */
+@import 'modules/o_buttons';
+@import 'modules/o_lightbox';
+
+
+
+/* ===2.4) UTILITIES LAYER=== */
+/**
+ * This is the layer to use for utilities classes (high specificity level)
+ * This is the only place where ACSS and !important are allowed.
+ * The prefix _u_ stands for utilities.
+ @import 'modules/u_utilname';
+
+ */
+
+/* ===2.5) VENDOR LAYER=== */
+/**
+ * This layer is supposed to include selectors with the highest specificity level,
+ * since it will include vendors overwrites
+ * The prefix _v_ stands for vendors.
+ @import 'modules/v_vendorname';
+
+ */
+
+/* ===CSS MEDIA QUERY=== */
+@import 'mq';
+
+@import "_devs/main";

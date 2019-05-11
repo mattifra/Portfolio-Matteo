@@ -4,7 +4,7 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const webpack = require('webpack');
-const utils = require('./src/assets/js/utils')
+const utils = require('./src/assets/js/utils/utils')
 const IS_DEV = process.env.NODE_ENV === 'development';
 
 
@@ -77,7 +77,7 @@ module.exports = {
           },
         },
       },
-      { 
+      {
         test: /\.pug$/,
         use: [
           'pug-loader'
@@ -95,7 +95,17 @@ module.exports = {
       },
       {
         test: /\.s[c|a]ss$/,
-        use: ['style-loader', MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader']
+        use: ['style-loader', MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader',
+          {
+            loader: 'postcss-loader',
+            options: {
+              sourceMap: true,
+              config: {
+                path: './webpack-configs/'
+              }
+            }
+          }
+        ]
       }
     ]
   }

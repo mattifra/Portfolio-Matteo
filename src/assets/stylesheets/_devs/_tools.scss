@@ -1,0 +1,306 @@
+
+@custom-media --xs-only (width < #{$screen-xs});
+@custom-media --xs-min (width >= #{$screen-xs});
+
+@custom-media --sm-only (#{$screen-xs} <= width < #{$screen-sm});
+@custom-media --sm-max (width < #{$screen-sm});
+@custom-media --sm-min (width >= #{$screen-sm});
+
+@custom-media --md-only (#{$screen-sm} <= width < #{$screen-md});
+@custom-media --md-max (width < #{$screen-md});
+@custom-media --md-min (width >= #{$screen-md});
+
+@custom-media --lg-only (#{$screen-md} <= width < #{$screen-lg});
+@custom-media --lg-max (width < #{$screen-lg});
+@custom-media --lg-min (width >= #{$screen-lg});
+
+@custom-media --xl-min (width >= #{$screen-xl});
+
+
+
+
+/* Toolbar Vars */
+$toolbar-bg: #333c43;
+$toolbar-text: #d5dbdd;
+$toolbar-ico: #b1cbbf;
+$toolbar-item: #7a4acc;
+
+.tool_bar {
+  position: fixed;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 100px;
+  background-color: $toolbar-bg;
+  color: $toolbar-text;
+  margin-top: 0;
+  padding-left: 0;
+  z-index: 1; //for grid
+
+  ul {
+    list-style-type: none;
+    padding-left: 0;
+    text-align: center;
+    margin-top: 5px;
+  }
+
+  li {
+    border-bottom: 1px solid lighten($toolbar-bg, 10%);
+
+    &:hover,
+    &.is-clicked {
+      background-color: lighten($toolbar-bg, 5%);
+    }
+  }
+}
+
+.tool_bar__button {
+  color: $toolbar-text;
+  border: 0;
+  background-color: transparent;
+  font-weight: 300;
+  font-size: rem(10);
+  padding: 20px 0;
+  display: inline-block;
+  border-radius: 2px;
+  text-transform: uppercase;
+
+  .fa {
+    color: $toolbar-ico;
+    display: block;
+    padding-bottom: 10px;
+    font-size: rem(20);
+  }
+
+  span {
+    font-size: inherit;
+  }
+}
+
+.tool_layer {
+  background: darken(bg-color(primary), 3%);
+  position: fixed;
+  right: 100px;
+  top: 0;
+  padding: 35px;
+  bottom: 0;
+  width: 425px;
+  height: 100%;
+  overflow-y: scroll;
+
+  &.is-closed {
+    display: none;
+  }
+
+  &.is-opened {
+    display: block;
+  }
+}
+
+.tool_title {
+  margin: 5px 0 10px;
+}
+
+.tool_subtitle {
+  margin: 25px 0;
+  padding-bottom: 5px;
+  border-bottom: 1px solid lighten(text-color(primary), 80%);
+  font-size: rem(16);
+  text-transform: uppercase;
+  color: lighten(text-color(primary), 55%);
+}
+
+.tool_par {
+  font-size: rem(14);
+}
+
+/* ===COLOR BOXES=== */
+.tool_boxes {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -10px;
+  margin-top: 20px;
+}
+
+.tool_box {
+  display: inline-block;
+  position: relative;
+  border-radius: 1px;
+  margin-left: 25px;
+  margin-bottom: 15px;
+  flex: 0 0 80px;
+  padding-top: 10px;
+
+  &::before {
+    content: '';
+    width: 120px;
+    height: 60px;
+    display: block;
+    margin: 0 auto;
+  }
+
+  &::after {
+    font-size: rem(11);
+    color: lighten(text-color(primary), 45%);
+    text-align: center;
+    display: block;
+    padding: 5px;
+    text-transform: uppercase;
+  }
+
+  .tool_layer & {
+    margin-left: 5px;
+    margin-bottom: 5px;
+    flex: 0 0 60px;
+
+    &::before {
+      width: 50px;
+      height: 50px;
+    }
+  }
+}
+
+@each $element, $map in $palette {
+  $element-str: to-upper-case('#{$element}');
+  // @debug '[***#{$element-str} PALETTE CLASS***] .tool_box-#{$element} | [***#{$element} COLORS MAP***] #{$map}';
+  .tool_box-#{$element} {
+    @each $key, $value in $map {
+      &--#{$key} {
+        // example of generated class: tool_box-text-primary
+        &::before {
+          //@debug '[***#{$element-str}: #{$key} COLOR***] #{$value}';
+          background-color: $value;
+          //border: 1px solid darken($value, 20%);
+          box-shadow: 0 0 5px #aeb5bd;
+          border-radius: 5px;
+        }
+
+        &::after {
+          content: '#{$key}: #{$value}';
+        }
+      }
+    }
+  }
+}
+
+@each $typoElement, $map in $typography {
+  .tool_#{$typoElement} {
+    $contentTypoElement: ();
+
+    @each $property, $value in $map {
+      $contentTypoElement: append($contentTypoElement, $property ':' $value ' | ');
+
+      &-props {
+        // i.e. .tool-h1-props
+        &::after {
+          content: ' #{$contentTypoElement}';
+        }
+      }
+    }
+  }
+}
+
+.tool_section {
+  margin: 45px 0;
+  clear: fix;
+}
+
+.tool_code {
+  padding: 10px 0;
+  color: lighten(text-color(primary), 60%);
+  border-bottom: 1px solid darken(border-color(reverse), 25%);
+  border-top: 1px solid darken(border-color(reverse), 25%);
+  font-size: rem(12);
+  margin: 15px 0;
+}
+
+.tool_icon {
+  float: left;
+  text-align: center;
+  padding: 8px 12px;
+  margin-bottom: 10px;
+}
+
+.tool_icon-name {
+  font-size: rem(12);
+  color: lighten(text-color(primary), 45%);
+  padding: 0 5px;
+  border-radius: 2px;
+  display: block;
+  background-color: darken(bg-color(primary), 5%);
+}
+
+.tool-mq {
+  font-size: 11px;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  background-color: black;
+  color: white;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  div {
+    opacity: 0;
+  }
+
+  .mq {
+    &::after {
+      display: inline;
+      padding-left: 10px;
+    }
+    &.xs::after { content: 'width < #{$screen-sm}' }
+    &.sm::after { content: '#{$screen-sm} <= width < #{$screen-md}' }
+    &.md::after { content: '#{$screen-md} <= width < #{$screen-lg}' }
+    &.lg::after { content: '#{$screen-lg} <= width < #{$screen-xl}' }
+    &.xl::after { content: 'width >= #{$screen-xl}' }
+  }
+  &:hover {
+    height: auto;
+    width: auto;
+    border-radius: 5px;
+    div {
+      transition: opacity ease-in-out 0.4s;
+      padding: 5px;
+      border-bottom: 1px solid transparent;
+      opacity: 0.4;
+    }
+    @media (--xs-only) {
+      .xs {
+        opacity: 1;
+      }
+    }
+    @media (--sm-only) {
+      .sm {
+        opacity: 1;
+      }
+    }
+    @media (--md-only) {
+      .md {
+        opacity: 1;
+      }
+    }
+    @media (--lg-only) {
+      .lg {
+        opacity: 1;
+      }
+    }
+    @media (--xl-min) {
+      .xl {
+        opacity: 1;
+      }
+    }
+    &::before {
+      opacity: 0;
+    }
+  }
+  &::before {
+    transition: opacity ease-in-out 0.2s;
+    content: 'MQ';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 1;
+  }
+}

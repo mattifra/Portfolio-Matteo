@@ -1,0 +1,125 @@
+/* ===WEB FONTS MANAGEMENT=== */
+
+/**
+* Use this mixin to easely generate a @font-face rule.
+* It uses the font-path property provided by postcss rucksack
+* to generate bulletproof src sets in @font-face
+*/
+@mixin font-face($family, $path, $weight: 400) {
+  @font-face {
+    font-family: $family;
+    font-path: $path;
+    font-weight: $weight;
+  }
+}
+
+/**
+ * @param $fonts-map
+ * Generating @font-face rule from the given $fonts map
+ * You can just update the font map to add a new font-face rule
+ */
+@mixin font-face-generator($fonts-map, $path) {
+  @each $font-key, $font-val in $fonts-map {
+    @if (map-get($font-val, weights)) {
+      $_family: map-get($font-val, family);
+      @each $weight-key, $weight-val in map-get($font-val, weights) {
+        $_path: '#{$path}/#{$_family}-#{$weight-key}';
+        @include font-face(#{$_family}, #{$_path}, $weight-val);
+      }
+    } @else {
+      $font-falback: map-get($font-val, family);
+    }
+  }
+}
+
+/**
+ * Sets the font for this weight.
+ * @param $family the font family to set.
+ * @param $weight one of 'bolder', 'heavy', 'bold', 'semibold', 'normal' (default),
+ * 'light', 'lighter' or 'thin'
+ */
+@mixin application-font($family, $weight: 'normal') {
+  // We use this kind of mapping in order to keep keywords
+  // bound to the Google Web Fonts standard imports.
+  @if ($weight == 'bolder') {
+    $weight: 900;
+  }
+
+  @if ($weight == 'heavy') {
+    $weight: 800;
+  }
+
+  @if ($weight == 'bold') {
+    $weight: 600;
+  }
+
+  @if ($weight == 'semibold') {
+    $weight: 500;
+  }
+
+  @if ($weight == 'normal') {
+    $weight: 400;
+  }
+
+  @if ($weight == 'light') {
+    $weight: 300;
+  }
+
+  @if ($weight == 'lighter') {
+    $weight: 200;
+  }
+
+  @if ($weight == 'thin') {
+    $weight: 100;
+  }
+
+  font-family: $family;
+  font-weight: $weight;
+}
+
+/**
+ * Sets the secondary fonts for this weight.
+ * @param $weight one of "light", "normal" (default), "bold" or "bolder" (if provided by font).
+ * Take care not to use this mixin to apply the primary font,
+ * whenever it is already declared for the body element and inherited from it.
+ */
+@mixin font($font, $weight: 'normal') {
+  $fontfamily: font-family($font);
+  @include application-font($fontfamily, $weight);
+}
+
+/**
+ * Applies the font smoothing
+ * Used for better cross browser support
+ * Ref: https://maximilianhoffmann.com/posts/better-font-rendering-on-osx
+ */
+@mixin font-smoothing($value: on) {
+  @if $value == on {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  } @else {
+    -webkit-font-smoothing: subpixel-antialiased;
+    -moz-osx-font-smoothing: auto;
+  }
+}
+
+/**
+ * Absolute  positioning an element
+ */
+@mixin center($xy: xy) {
+  @if $xy == xy {
+    @include transform(translateX(-50%) translateY(-50%));
+    left: 50%;
+    top: 50%;
+    bottom: auto;
+    right: auto;
+  } @else if $xy == x {
+    @include transform(translateX(-50%));
+    left: 50%;
+    right: auto;
+  } @else if $xy == y {
+    @include transform(translateY(-50%));
+    top: 50%;
+    bottom: auto;
+  }
+}

@@ -1,0 +1,75 @@
+@custom-media --test_media (width <= 50rem);
+
+@media(--test_media) {
+  .test_present-env-media {
+    color: white;
+  }
+}
+
+/* Testing presetenv */
+.test_preset-env {
+  background: color(red alpha(-10%));
+}
+
+/* Testing presetenv pseudo selectors facilities */
+.test_preset-env:matches(.test, .main) {
+  color: white;
+}
+
+/* Testing presetenv custom properties with fallback */
+:root {
+  --test_custom-prop: #efefef;
+}
+
+.test_preset-env-custom-properties {
+  color: var(--test_custom-prop);
+}
+
+/* Testing postcss-assets */
+.test_postcss-assets {
+  background: resolve('1x1.png');
+}
+
+$test_fontPath: '/fonts/PlayfairDisplay-';
+
+/* Testing rucksack */
+@include font-face('PlayfairDisplay', $test_fontPath + 'Regular');
+@include font-face('PlayfairDisplay', $test_fontPath + 'Bold', 700);
+
+.test_rucksack-font-regular {
+  font-family: font-family(primary);
+}
+
+.test_rucksack-font-bold {
+  font-family: font-family(primary);
+  font-weight: bold;
+  clear: fix;
+}
+
+.test_rucksack-autoprefixer {
+  user-select: none;
+}
+
+/* Testing font functions and mixins */
+.test_font-family {
+  font-family: font-family(primary);
+}
+
+.test_font {
+  @include font(primary, bold);
+}
+
+/* Testing rem() function with single or mutil values added as parameters */
+.test_rem-size {
+  margin: rem(16 20);
+  font-size: rem(21);
+}
+
+/* Testing PostCSS sprites */
+.test_sprite {
+  //background: url('images/sprite/visa.png');
+}
+
+
+
+

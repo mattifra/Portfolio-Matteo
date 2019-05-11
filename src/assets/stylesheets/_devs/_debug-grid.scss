@@ -1,0 +1,42 @@
+// Utility debug
+
+body.is-grid-shown {
+  .debug_container {
+    display: block;
+  }
+}
+
+body.debugger-enabled {
+  #dev_debugger {
+    display: block;
+  }
+}
+
+#dev_debugger {
+  display: none;
+}
+
+
+.debug_container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: none;
+
+  .button {
+    position: fixed;
+    right: 5px;
+    bottom: 5px;
+  }
+}
+
+.debug_row {
+  height: 100%;
+}
+
+.debug_box {
+  background: rgba(salmon, .25);
+  height: 100%;
+}

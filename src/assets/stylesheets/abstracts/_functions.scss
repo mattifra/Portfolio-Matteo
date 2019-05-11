@@ -1,0 +1,110 @@
+/* ===GETTING COLORS FROM PALETTE=== */
+/**
+ * The function palette is used by the following functions
+ * text-color(), border-color() and bg-color()
+ */
+@function palette($feature, $role: 'primary') {
+  @if map-has-key($palette, $feature) {
+    $feat: map-get($palette, $feature);
+
+    @if map-has-key($feat, $role) {
+      @return map-get($feat, $role);
+    }
+
+    @warn "Unknown `#{$role}` in $feature";
+  }
+
+  @warn "Unknown `#{$feature}` in $palette";
+}
+
+/* ===BACKGROUND COLOR FUNCTION=== */
+@function bg-color($role: 'primary') {
+  @return palette('background', $role);
+}
+
+/* ===TEXT COLOR FUNCTION=== */
+@function text-color($role: 'primary') {
+  @return palette('text', $role);
+}
+
+/* ===BORDER COLOR FUNCTION=== */
+@function border-color($role: 'primary') {
+  @return palette('border', $role);
+}
+
+/* ===GETTING BUTTONS STYLE FROM MAP=== */
+@function buttons($feature, $role: 'primary') {
+  @if map-has-key($buttons, $feature) {
+    $feat: map-get($buttons, $feature);
+
+    @if map-has-key($feat, $role) {
+      @return map-get($feat, $role);
+    }
+
+    @warn "Unknown `#{$role}` in $feature";
+  }
+
+  @warn "Unknown `#{$feature}` in $palette";
+}
+
+/* ===GETTING BREAKPOINT VALUE FROM MAP=== */
+@function breakpoint($size) {
+  @if map-has-key($breakpoints, $size) {
+    @return map-get($breakpoints, $size);
+  }
+  @warn "Unknown `#{$size}` in $breakpoints";
+}
+
+/* ===GETTING VALUE FROM GENERIC MAP=== */
+@function map($map, $key) {
+  @if not map-has-key($map, $key) {
+    @warn "Key `#{$key}` not found in $map map.";
+  }
+  @return map-get($map, $key);
+}
+
+/* ===GET FONT FAMILY NAME FROM NESTED MAP=== */
+@function font-family($font) {
+  @if map-has-key($fonts, $font) {
+    $fontprops: map-get($fonts, $font);
+
+    @if map-has-key($fontprops, 'family') {
+      @return map-get($fontprops, 'family');
+    }
+    @warn "Unknown family key in $font";
+  }
+  @warn "Unknown `#{$font}` in $fonts";
+}
+
+/* ===REM FUNCTION=== */
+/**
+ * Sassy functions to get the rem equivalent of a px value
+ * preset-css-env will take care of fallback for older browsers
+ * !NOTE: you only need to change the $rem-baseline value if your base size 
+ * is different from 10px (use _var_typography.scss in case)
+ * @param value is referred to px
+ * Credits: Rowan Manning
+ */
+@function rem-value($value) {
+  $rem-base: 10 !default;
+
+  /* If value is a number, do some magic rem stuff */
+  @if type-of($value) == "number" {
+    /* Slightly hacky way of removing unit */
+    $unitless-value: $value / ($value * 0 + 1);
+    /* Return rem value */
+    @return #{$unitless-value / $rem-base}rem;
+  }
+  /* Non-numeric value, just return */
+  @return $value;
+}
+
+@function rem($values) {
+  /* Loop over pixel values to get rem values */
+  $rem-values: unquote("");
+  @each $value in $values {
+    $rem-values: append($rem-values, rem-value($value));
+  }
+
+  @return $rem-values;
+}

@@ -1,0 +1,94 @@
+/* ===PALETTE SETUP=== */
+
+/**
+ * Replace the following colors with the one you actually need for your project.
+ * These ones below are used just for sample scope and were taken from http://bada55.io/
+ */
+
+$black: #000000;
+$white: #ffffff;
+
+$alcool: #a1c001;
+$booobs: #b000b5;
+$badass: #bada55;
+$coffee: #c0ffee;
+$decode: #dec0de;
+$erotic: #e2071c;
+$fables: #fab135;
+$loaded: #10aded;
+$rebecca: #663399;
+$tunno: #5000c4;
+$lalala: #1a1a1a;
+
+/**
+ * in order to use one the colors included in the palette map,
+ * you can simply use the functions text-color(key), bg-color(key), border-color(key)
+ * ie: text-color(primary)
+ */
+
+$palette: (
+  text: (
+    primary: $black,
+    secondary: $rebecca,
+    tertiary: $coffee,
+    reverse: $white,
+    brand: $booobs,
+    success: $badass,
+    warning: $fables,
+    error: $erotic
+  ),
+  background: (
+    primary: $white,
+    secondary: $rebecca,
+    tertiary: $coffee,
+    reverse: $white,
+    brand: $booobs,
+    success: $badass,
+    warning: $fables,
+    error: $erotic,
+    debug: $fables
+  ),
+  border: (
+    primary: $black,
+    secondary: $rebecca,
+    tertiary: $coffee,
+    reverse: $white,
+    brand: $booobs,
+    success: $badass,
+    warning: $fables,
+    error: $erotic
+  )
+);
+
+/* ===BUTTONS COLORS SETUP=== */
+
+/**
+ * The $buttons map is used to style buttons
+ * Please consider that the key used is the one used for classes name as well
+ * ie: .button-primary, .button-secondary
+ */
+
+$buttons: (
+  primary: (
+    color: $black,
+    background-color: $white,
+    border-color: $coffee,
+    hover-color: $rebecca,
+    hover-background-color: $badass,
+    hover-border-color: $coffee,
+    active-color: $rebecca,
+    active-background-color: $booobs,
+    active-border-color: $black
+  ),
+  secondary: (
+    color: $white,
+    background-color: $white,
+    border-color: $white,
+    hover-color: $white,
+    hover-background-color: $white,
+    hover-border-color: $white,
+    active-color: $white,
+    active-background-color: $white,
+    active-border-color: $white
+  )
+);

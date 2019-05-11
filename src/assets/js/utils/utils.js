@@ -3,7 +3,8 @@ exports.pages = function (env, folder = '') {
   const HtmlWebpackPlugin = require('html-webpack-plugin')
   const fs = require('fs')
   const path = require('path')
-  const viewsFolder = path.resolve(__dirname, `../../views/${rootPagesFolderName}/${folder}`)
+  const viewsFolder = path.resolve(__dirname, `../../../views/${rootPagesFolderName}/${folder}`)
+  
 
   var pages = []
 
@@ -12,10 +13,10 @@ exports.pages = function (env, folder = '') {
       return false;
 
     const viewName = view.split('.')[0];
-    const fileName = folder === '' ? `${viewName}.html` : `${folder}/${viewName}.html`;
+    const fileName = `${viewName}.html`;
     const options = {
       filename: fileName,
-      template: path.resolve(__dirname, `../../views/${rootPagesFolderName}/${view}`),
+      template: path.resolve(__dirname, `../../../views/${rootPagesFolderName}/${view}`),
       inject: true
     };
 

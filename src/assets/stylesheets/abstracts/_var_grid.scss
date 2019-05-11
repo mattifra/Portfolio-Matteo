@@ -1,0 +1,31 @@
+/*  ===GRID GOLBAL SETTINGS=== */
+
+
+$screen-xs: map($breakpoints, small);
+$screen-sm: map($breakpoints, medium);
+$screen-md: map($breakpoints, large);
+$screen-lg: map($breakpoints, xlarge);
+$screen-xl: map($breakpoints, xxlarge);
+
+
+
+/**
+ * W3C Custom Media Queries Level 4 allow using the same media query in multiple places,
+ * without the need to duplicate values across a stylesheet, and promote DRYer code.
+ * Please, use the @custom-media rule to define a new custom media query.
+ * Ref: https://drafts.csswg.org/mediaqueries-5/#custom-mq
+ */
+@custom-media --xs-only (width < #{$screen-xs});
+@custom-media --xs-min (width >= #{$screen-xs});
+
+@custom-media --sm-only (#{$screen-xs} <= width < #{$screen-sm});
+@custom-media --sm-max (width < #{$screen-sm});
+@custom-media --sm-min (width >= #{$screen-sm});
+
+@custom-media --md-only (#{$screen-sm} <= width < #{$screen-md});
+@custom-media --md-max (width < #{$screen-md});
+@custom-media --md-min (width >= #{$screen-md});
+
+@custom-media --lg-only (#{$screen-md} <= width < #{$screen-lg});
+@custom-media --lg-max (width < #{$screen-lg});
+@custom-media --lg-min (width >= #{$screen-lg});
