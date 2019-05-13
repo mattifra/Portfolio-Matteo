@@ -12,15 +12,27 @@ import Animal from './components/animalClass'; //importo una classe
 import Lion from './components/lionClass';
 import Counter from './components/counter';
 import Helper from './utils/helper';
-import promiseTest from './components/promiseTest'
 
-console.log(imported)
-console.log(fellowship, total);
-a('ciao');
-console.log(multiply(5, 9));
+
+
+//list of components I want in the page
+let components = ['counter', 'animalClass', 'lionClass'];
+
+//cycle the array for dynamically display them;
+for (let component of components) {
+  import(/* webpackChunkName: `components-[request]` */ `./components/${component}`).then((module) => {
+    let DynamicComponent = module.default; // we except that the component is the the default attribute of the module
+    let dynamicComponent = new DynamicComponent(component);
+    dynamicComponent.render();
+  }).catch(error => {
+    console.error('Failed to load the component', error.stack);
+  });
+}
+
 Helper.help('Heeellppp')
 
 
+/*
 
 let lion = new Lion('lion', 'blonde');
 let anim = new Animal('Generic')
@@ -33,9 +45,16 @@ anim.render();
 counter.render();
 promisetest.render();
 
-/*
+
 anim.hello('animall')
 lion.hello('stocazz');
 lion.sayHello();
 anim.sayHello();
+
+console.log(imported)
+console.log(fellowship, total);
+a('ciao');
+console.log(multiply(5, 9));
+
+
 */

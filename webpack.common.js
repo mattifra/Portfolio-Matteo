@@ -4,7 +4,8 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const webpack = require('webpack');
-const utils = require('./src/assets/js/utils/utils')
+const utils = require('./src/assets/js/utils/utils');
+const Critters = require('critters-webpack-plugin');
 const IS_DEV = process.env.NODE_ENV === 'development';
 
 
@@ -16,7 +17,7 @@ module.exports = {
   },
   output: {
     filename: '[name].bundle.js',
-    chunkFilename: '[name].bundle.js',
+    chunkFilename: '[name].chunks.js',
     path: path.resolve(__dirname, 'dist')
   },
   plugins: [
@@ -26,6 +27,7 @@ module.exports = {
       filename: 'index.html',
       inject: true
     }),
+    new Critters(),
     ...utils.pages(),
 
 

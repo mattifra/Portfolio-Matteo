@@ -15,7 +15,7 @@ export default class Animal {
   }
 
   render() {
-    this.hello(this.name)
+    this.hello('Other param')
     this.sayHello();
   }
 }
